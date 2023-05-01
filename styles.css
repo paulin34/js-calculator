@@ -1,0 +1,130 @@
+body
+{
+    background-color: black;
+    padding:2rem;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container
+{
+    position:absolute;
+    left:41vw;
+    display:grid;
+    grid-template-columns:repeat(4,80px);
+    grid-template-rows: repeat(7,80px);
+    gap:10px;
+}
+
+
+
+
+.preview
+{
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:1;
+    grid-column-end:5;
+}
+
+.display
+{
+    color:white;
+    grid-row-start:2;
+    grid-row-end:2;
+    grid-column-start:1;
+    grid-column-end:5;
+}
+
+
+.container div
+{
+    text-align:center;
+    color:white;
+    font-size:xx-large;
+    font-family: 'Roboto';
+    padding-top:1.1rem;
+}
+.btn-num
+{
+    background-color : #505050;
+}
+.btn-p
+{
+    background-color: #505050;
+}
+.btn-eq
+{
+    background-color: #505050;
+    grid-row-start:7;
+    grid-row-end:8;
+    grid-column-start:3;
+    grid-column-end:5;
+    
+}
+.btn-op, .btn-eq
+{
+    background-color: #FF9500;
+    
+}
+.btn-c, .btn-mod, .btn-pm
+{
+    background-color: #D4D4D2;
+}
+
+.btn-c,.btn-mod,.btn-num,.btn-op,.btn-p,.btn-pm
+{
+    border-radius:50%;
+}
+
+.btn-eq
+{
+    border-radius:32%;
+}
+
+.container .btn-mod, .container .btn-pm, .container .btn-c
+{
+    color:black;
+}
+
+.container .display
+{
+    text-align: right;
+    font-size:3.5rem;
+    overflow: hidden;
+}
+
+.container .preview
+{
+    color:#5f6061;
+    text-align: right;
+    font-size:3rem;
+    overflow:hidden;
+    padding-top:2rem;
+}
+
+h1
+{
+    color:white;
+    text-decoration: underline;
+    text-decoration-color: #FF9500;
+
+    font-size:xx-large;
+    text-align: center;
+    font-family:Georgia;
+}
+
+h3
+{
+    padding:0;
+    text-align: center;
+    color:#D4D4D2;
+    font-size:x-large;
+    font-family:Georgia;
+    text-align: center;
+}
+
+p
+{
+    display: inline;
+    color:#FF9500;
+}
