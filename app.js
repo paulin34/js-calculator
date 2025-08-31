@@ -1,10 +1,10 @@
 let numButtons = document.querySelectorAll(".btn-num");
 let opButtons = document.querySelectorAll(".btn-op");
 let displayTxt = document.querySelector(".display");
+let previewTxt = document.querySelector(".preview");
 let eqButton = document.querySelector(".btn-eq");
 let cButton = document.querySelector(".btn-c");
 let pmButton = document.querySelector(".btn-pm");
-let previewTxt = document.querySelector(".preview");
 
 let operator='+';
 let result=0;
