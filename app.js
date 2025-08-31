@@ -6,6 +6,7 @@ let eqButton = document.querySelector(".btn-eq");
 let cButton = document.querySelector(".btn-c");
 let pmButton = document.querySelector(".btn-pm");
 
+/// Comment git 
 let operator='+';
 let result=0;
 displayTxt.textContent = '0';
