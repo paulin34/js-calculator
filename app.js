@@ -35,7 +35,6 @@ opButtons.forEach(button => button.addEventListener('click',() =>
 
 eqButton.addEventListener('click',() =>
 {
-    // console.log(result);
     calculate();
     displayTxt.textContent = result;
     previewTxt.textContent ='';
@@ -83,6 +82,8 @@ function calculate()
         case '/':
             result /= number;
             break;
+        case '%':
+            result = (result / 100.0) * number;
         default:
             break;
     }
