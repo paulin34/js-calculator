@@ -6,13 +6,14 @@ let eqButton = document.querySelector(".btn-eq");
 let cButton = document.querySelector(".btn-c");
 let pmButton = document.querySelector(".btn-pm");
 
-/// Comment git 
-let operator='+';
+
+let operator='';
 let result=0;
 displayTxt.textContent = '0';
 previewTxt.textContent = '';
 numButtons.forEach(button => button.addEventListener('click', () =>
 {
+
     if(displayTxt.textContent==='0')
     {
         displayTxt.textContent = button.textContent;
@@ -34,18 +35,18 @@ opButtons.forEach(button => button.addEventListener('click',() =>
 
 eqButton.addEventListener('click',() =>
 {
+    // console.log(result);
     calculate();
     displayTxt.textContent = result;
     previewTxt.textContent ='';
-    result = 0;
+    operator='';
 })
 
 cButton.addEventListener('click',() =>
 {
-    result=0;
     displayTxt.textContent='0';
     previewTxt.textContent='';
-    operator='+';
+    operator='';
 })
 
 pmButton.addEventListener('click',() =>
@@ -64,22 +65,26 @@ pmButton.addEventListener('click',() =>
 function calculate()
 {
     let number = Number(displayTxt.textContent);
-    console.log(number);
-    if(operator=='+')
+    switch(operator)
     {
-        result += number;
-    }
-    if(operator=='-')
-    {
-        result -= number;
-    }
-    if(operator=='/')
-    {
-        result /= number;
-    }
-    if(operator=='X')
-    {
-        result *= number;
+        case '':
+            result=number;
+            break;
+        case '+':
+            result += number;
+            break;
+        case '-':
+            result -= number;
+            break;
+        case 'X':
+            console.log(result + " " + number);
+            result *= number;
+            break;
+        case '/':
+            result /= number;
+            break;
+        default:
+            break;
     }
     
 }
